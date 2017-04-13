@@ -5,7 +5,7 @@ import teradata
 def create_td_connection():
     try:
         uda_exec = teradata.UdaExec(appName='Test', version=1, logConsole=True,
-                                    logLevel="DEBUG", configureLogging=True)
+                                    logLevel="INFO", configureLogging=True)
 
         kw = {"ANSI": True}
 
@@ -24,7 +24,7 @@ def create_td_connection():
     except teradata.DatabaseError as e:
         print('Drivers seem properly installed.')
     except OSError as e:
-        print('CreateTDConnection:Failed to Conect to teradata server', e)
+        print('create_td_connection:Failed to connect to teradata server', e)
         print("status='Failed'")
         print(repr(e))
 

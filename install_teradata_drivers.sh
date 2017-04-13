@@ -2,8 +2,10 @@
 
 mkdir -p /app/install/
 mkdir -p /app/vendored/
-cp /code/tdodbc1510__linux_indep.15.10.01.05-1.tar /app/install/
-cd /app/install/
+cd /code/
+
+# tdodbc1510__linux_indep.15.10.01.05-1.tar /app/install/
+# cd /app/install/
 
 
 tar -xf tdodbc1510__linux_indep.15.10.01.05-1.tar
