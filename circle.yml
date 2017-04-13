@@ -1,0 +1,15 @@
+machine:
+  environment:
+  pre:
+    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
+    - pip install --upgrade docker-compose==1.6.2
+
+  services:
+    - docker
+
+dependencies:
+    pre:
+      - docker-compose build teradata
+test:
+  override:
+    - docker-compose run teradata make test

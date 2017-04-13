@@ -1,0 +1,7 @@
+version: "2"
+services:
+  teradata:
+    image: bayesimpact/teradata-connector
+    volumes:
+      - ./Makefile:/home/tduser/work/Makefile:ro
+      - ./teradata_test_connect.py:/home/tduser/work/teradata_test_connect.py:ro
