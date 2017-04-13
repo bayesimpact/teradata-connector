@@ -4,12 +4,7 @@ mkdir -p /app/install/
 mkdir -p /app/vendored/
 cd /code/
 
-# tdodbc1510__linux_indep.15.10.01.05-1.tar /app/install/
-# cd /app/install/
-
-
 tar -xf tdodbc1510__linux_indep.15.10.01.05-1.tar
-mkdir ./tdodbc1510
 tar -xf tdodbc1510__linux_indep.15.10.01.05-1.tar.gz
 tar xf TeraGSS_linux_x64__linux_indep.15.10.04.02-1.tar.gz
 tar xf tdicu1510__linux_indep.15.10.01.02-1.tar.gz
