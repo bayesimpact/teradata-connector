@@ -8,14 +8,13 @@ We use Teradata's official Python library: `teradata`, and keep connection strin
 ## Setup Development environment
 
 1. Install Docker for Mac and docker-compose
-
 	`https://docs.docker.com/docker-for-mac/`
 
 	`pip install docker-compose`
 
-2. Build docker with jupyter notebook
+2. Download Teradata drivers
 
-	`docker-compose build teradata`
+Download Teradata drivers ` tdodbc1510__linux_indep.15.10.01.05-1.tar` from the teradata website - `https://downloads.teradata.com`
 
 3. Run docker (jupyter notebook acessible on localhost:8888)
 
