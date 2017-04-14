@@ -3,5 +3,5 @@ services:
   teradata:
     image: bayesimpact/teradata-connector
     volumes:
-      - ./Makefile:/home/nbuser/work/Makefile:ro
-      - ./teradata_test_connect.py:/home/nbuser/work/teradata_test_connect.py:ro
+      - ./Makefile:/home/tduser/work/Makefile:ro
+      - ./teradata_test_connect.py:/home/tduser/work/teradata_test_connect.py:ro

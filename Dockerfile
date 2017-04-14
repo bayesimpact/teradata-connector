@@ -39,15 +39,14 @@ RUN pip install -r /code/requirements.txt
 
 # Configure environment
 ENV SHELL /bin/bash
-ENV NB_USER nbuser
-ENV NB_UID 1000
-ENV HOME /home/$NB_USER
+ENV TD_USER tduser
+ENV TD_UID 1000
+ENV HOME /home/$TD_USER
 
 # Create user with UID=1000 and in the 'users' group
-RUN useradd -m -s /bin/bash -N -u $NB_UID $NB_USER
+RUN useradd -m -s /bin/bash -N -u $TD_UID $TD_USER
 
 # Setup user home directory
-RUN mkdir /home/$NB_USER/.jupyter
-RUN mkdir /home/$NB_USER/.local
-WORKDIR /home/$NB_USER/work
+RUN mkdir /home/$TD_USER/.local
+WORKDIR /home/$TD_USER/work
 
