@@ -12,13 +12,16 @@ RUN yum install -y libxml2-devel libxml++-devel python-devel
 
 # Download Python 3 and compile
 RUN cd /opt \
-    && curl -O https://www.python.org/ftp/python/3.4.2/Python-3.4.2.tar.xz \
-    && tar xf Python-3.4.2.tar.xz && cd Python-3.4.2 \
+    && curl -O https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz \
+    && tar xf Python-3.6.0.tar.xz && cd Python-3.6.0 \
     &&./configure --prefix=/usr/local --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib" \
     && make \
     && make altinstall && cd /opt \
-    && rm -f Python-3.4.2.tar.xz \
-    && rm -rf Python-3.4.2/
+    && rm -f Python-3.6.0.tar.xz \
+    && rm -rf Python-3.6.0/
+
+# Install useful python tools
+RUN yum install -y python-dateutil
 
 # Install Teradata Drivers
 RUN yum -y install ksh
